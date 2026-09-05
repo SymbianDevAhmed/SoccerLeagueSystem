@@ -1,6 +1,8 @@
-# ⚽ Soccer League System
+# ⚽ Java OOP - Soccer League System
 
-A Java Object-Oriented Programming project that simulates a simple soccer league system.
+> A Java Object-Oriented Programming project that simulates a simple soccer league system.
+
+---
 
 ## 📌 Project Overview
 
@@ -16,19 +18,20 @@ It allows the system to:
 - Display the league results table.
 - Display detailed information about matches and goals.
 
-## 🏗️ Project Structure
+---
 
-The project contains exactly five Java classes:
+## ✨ Features
 
-```text
-src/
-└── soccerleaguesystem/
-    ├── Player.java
-    ├── Team.java
-    ├── Goal.java
-    ├── Match.java
-    └── Schedule.java
-```
+- 👤 Manage players and their information.
+- 🏆 Manage teams and their players.
+- ⚽ Manage matches between teams.
+- 🥅 Record goals and goal scorers.
+- 📊 Calculate team goals and points.
+- 🏅 Rank teams based on their points.
+- 📋 Display the league results table.
+- 🔎 Display detailed match and goal information.
+
+---
 
 ## 🧩 Classes
 
@@ -38,9 +41,11 @@ Represents a player in the soccer league.
 
 **Attributes:**
 
-- `playerId` - Player ID
-- `name` - Player name
-- `position` - Player position
+- `playerId` — Player ID
+- `name` — Player name
+- `position` — Player position
+
+---
 
 ### 🏆 **`Team`**
 
@@ -48,11 +53,13 @@ Represents a soccer team.
 
 **Attributes:**
 
-- `teamId` - Team ID
-- `teamName` - Team name
-- `totalGoals` - Total goals scored
-- `points` - Team points
-- `players` - List of players
+- `teamId` — Team ID
+- `teamName` — Team name
+- `totalGoals` — Total goals scored
+- `points` — Team points
+- `players` — List of players
+
+---
 
 ### ⚽ **`Goal`**
 
@@ -60,9 +67,11 @@ Represents a goal scored during a match.
 
 **Attributes:**
 
-- `matchId` - Match identifier
-- `scorer` - Player who scored
-- `minute` - Minute when the goal was scored
+- `matchId` — Match identifier
+- `scorer` — Player who scored
+- `minute` — Minute when the goal was scored
+
+---
 
 ### 🥅 **`Match`**
 
@@ -70,10 +79,12 @@ Represents a match between two teams.
 
 **Attributes:**
 
-- `matchId` - Match ID
-- `homeTeam` - Home team
-- `awayTeam` - Away team
-- `goals` - List of goals
+- `matchId` — Match ID
+- `homeTeam` — Home team
+- `awayTeam` — Away team
+- `goals` — List of goals
+
+---
 
 ### 📅 **`Schedule`**
 
@@ -89,24 +100,67 @@ Manages the soccer league schedule.
 - Display the results table.
 - Display match details.
 
-## 🛠️ Technologies Used
+---
 
-- ☕ Java
-- 🧱 Object-Oriented Programming (OOP)
-- 📋 ArrayList
-- 💻 IntelliJ IDEA
-- 🔧 Git
-- 🐙 GitHub
+## 🔗 Class Relationships
 
-## 🧠 OOP Concepts Used
+```text
+Schedule
+   │
+   ├── ArrayList<Team>
+   │        │
+   │        └── ArrayList<Player>
+   │
+   └── ArrayList<Match>
+            │
+            ├── Home Team
+            ├── Away Team
+            └── ArrayList<Goal>
+                       │
+                       └── Player (Scorer)
+```
+
+The project demonstrates relationships between objects through class attributes and `ArrayList` collections.
+
+---
+
+## 🧠 OOP Concepts Demonstrated
 
 - Classes and Objects
 - Encapsulation
 - Composition
-- ArrayList Collections
 - Constructors
 - Getters and Setters
 - Methods
+- `ArrayList` Collections
+- Object Relationships
+
+---
+
+## 🛠️ Technologies Used
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+---
+
+## 🏗️ Project Structure
+
+The project contains exactly five Java classes:
+
+```text
+src/
+└── soccerleaguesystem/
+    ├── Player.java
+    ├── Team.java
+    ├── Goal.java
+    ├── Match.java
+    └── Schedule.java
+```
+
+---
 
 ## 📊 Example Output
 
@@ -126,6 +180,8 @@ Player 1 - Minute: 45
 Player 3 - Minute: 70
 ```
 
+---
+
 ## ▶️ How to Run
 
 1. Open the project in IntelliJ IDEA.
@@ -133,18 +189,23 @@ Player 3 - Minute: 70
 3. Run the `main()` method.
 4. The league results and match details will be displayed in the console.
 
-## 🎯 Assignment
+---
 
-This project was developed as part of the:
+## 🎯 Learning Objective
 
-**DEPI – Software Testing Track**
+The purpose of this project is to strengthen practical understanding of **Java Object-Oriented Programming** by building a simple soccer league management system.
 
-**Part 01: Java Fundamentals**
+The project provides practical experience with:
 
-**Session 04**
+- Designing classes and objects.
+- Applying encapsulation and composition.
+- Creating relationships between objects.
+- Managing collections using `ArrayList`.
+- Calculating and updating team statistics.
+- Implementing methods for object interaction.
 
-**Assignment #02 – Java OOP Assignment: Soccer League System**
+---
 
 ## 👨‍💻 Author
 
-Ahmed Gaber
+**Ahmed Gaber**
